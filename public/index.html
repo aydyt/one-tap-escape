@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>一指逃生</title>
+  <meta name="description" content="点一下，换边。一局几十秒，把分数发给好友，看谁先撞墙。">
+  <meta property="og:title" content="一指逃生">
+  <meta property="og:description" content="点一下，换边。看你能撑多少分，把链接发给好友挑战。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="og.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="一指逃生">
+  <meta name="twitter:description" content="点一下，换边。看你能撑多少分，把链接发给好友挑战。">
+  <meta name="twitter:image" content="og.svg">
+  <meta name="theme-color" content="#120814">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="game" width="390" height="844" aria-label="一指逃生游戏画面"></canvas>
+    <div id="top">
+      <p id="banner" hidden></p>
+      <div id="hud" hidden>
+        <p id="mode-tag">今日同一关</p>
+        <p id="score" aria-hidden="true">0</p>
+        <p id="best-inline"></p>
+      </div>
+    </div>
+    <section id="intro">
+      <p class="eyebrow">一指逃生</p>
+      <h1>点一下，换边</h1>
+      <p id="intro-sub">看你能撑多久</p>
+      <p id="count" aria-live="polite">3</p>
+      <p class="desktop-hint">空格键也能换边</p>
+    </section>
+    <section id="result" hidden>
+      <div class="card" id="card">
+        <p class="brand">一指逃生</p>
+        <p id="badge" hidden>新纪录</p>
+        <p id="result-score">0</p>
+        <p id="result-unit">分</p>
+        <p id="result-roast"></p>
+        <p id="result-friend" hidden></p>
+        <div class="stats">
+          <p id="result-daily"></p>
+          <p id="result-best"></p>
+        </div>
+        <button id="btn-again" class="primary" type="button">再来一局</button>
+        <button id="btn-challenge" type="button">挑战好友</button>
+        <button id="btn-save" type="button">保存图片</button>
+      </div>
+    </section>
+    <section id="preview" hidden>
+      <div class="preview-card">
+        <img id="preview-img" alt="一指逃生战绩，长按可保存">
+        <p>长按图片保存，发到微信、小红书或抖音</p>
+        <button id="preview-close" class="primary" type="button">关闭</button>
+      </div>
+    </section>
+    <p id="toast" hidden role="status"></p>
+  </div>
+  <noscript><p class="noscript">打开 JavaScript 才能玩一指逃生。</p></noscript>
+  <script src="js/constants.js"></script>
+  <script src="js/rng.js"></script>
+  <script src="js/copy.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/input.js"></script>
+  <script src="js/level.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/share.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
