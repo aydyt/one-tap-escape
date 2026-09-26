@@ -1,0 +1,17 @@
+{
+  "name": "一指逃生",
+  "short_name": "一指逃生",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#120814",
+  "theme_color": "#120814",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
